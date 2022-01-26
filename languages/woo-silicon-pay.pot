@@ -1,0 +1,771 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+"Project-Id-Version: SiliconPay WooCommerce Payment Gateway\n"
+"POT-Creation-Date: 2021-10-26 10:34+0400\n"
+"PO-Revision-Date: 2021-10-26 10:34+0400\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.3\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-Flags-xgettext: --add-comments=translators:\n"
+"X-Poedit-WPHeader: woo-silicon-pay.php\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.min.js\n"
+
+#15
+#: includes/class-wc-gateway-silicon-pay.php:393
+msgid "Enable/Disable"
+msgstr ""
+
+#. translators: payment method title
+#17
+#, php-format
+msgid "Enable SiliconPay - %s"
+msgstr ""
+
+#19
+msgid "Enable this gateway as a payment option on the checkout page."
+msgstr ""
+
+#24
+#: includes/class-wc-gateway-silicon-pay.php:401
+msgid "Title"
+msgstr ""
+
+#26
+#: includes/class-wc-gateway-silicon-pay.php:403
+msgid ""
+"This controls the payment method title which the user sees during checkout."
+msgstr ""
+
+#28
+#: includes/class-wc-gateway-silicon-pay.php:182
+#: includes/class-wc-gateway-silicon-pay.php:357
+msgid "SiliconPay"
+msgstr ""
+
+#31
+#: includes/class-wc-gateway-silicon-pay.php:408
+msgid "Description"
+msgstr ""
+
+#33
+#: includes/class-wc-gateway-silicon-pay.php:410
+msgid ""
+"This controls the payment method description which the user sees during "
+"checkout."
+msgstr ""
+
+#38
+#: includes/class-wc-gateway-silicon-pay.php:423
+msgid "Payment Option"
+msgstr ""
+
+#40
+#: includes/class-wc-gateway-silicon-pay.php:425
+msgid ""
+"Popup shows the payment popup on the page while Redirect will redirect the "
+"customer to SiliconPay to make payment."
+msgstr ""
+
+#44
+#101
+#: includes/class-wc-gateway-silicon-pay.php:429
+#: includes/class-wc-gateway-silicon-pay.php:510
+#: includes/class-wc-gateway-silicon-pay.php:522
+msgid "Select One"
+msgstr ""
+
+#45
+#: includes/class-wc-gateway-silicon-pay.php:430
+msgid "Popup"
+msgstr ""
+
+#46
+#: includes/class-wc-gateway-silicon-pay.php:431
+msgid "Redirect"
+msgstr ""
+
+#50
+#: includes/class-wc-gateway-silicon-pay.php:459
+msgid "Autocomplete Order After Payment"
+msgstr ""
+
+#51
+#: includes/class-wc-gateway-silicon-pay.php:460
+msgid "Autocomplete Order"
+msgstr ""
+
+#54
+#: includes/class-wc-gateway-silicon-pay.php:463
+msgid ""
+"If enabled, the order will be marked as complete after successful payment"
+msgstr ""
+
+#59
+#: includes/class-wc-gateway-silicon-pay.php:468
+msgid "Remove Cancel Order & Restore Cart Button"
+msgstr ""
+
+#60
+#: includes/class-wc-gateway-silicon-pay.php:469
+msgid "Remove the cancel order & restore cart button on the pay for order page"
+msgstr ""
+
+#66
+#: includes/class-wc-gateway-silicon-pay.php:475
+msgid "Split Payment"
+msgstr ""
+
+#67
+#: includes/class-wc-gateway-silicon-pay.php:476
+msgid "Enable Split Payment"
+msgstr ""
+
+#75
+#: includes/class-wc-gateway-silicon-pay.php:484
+msgid "Subaccount Code"
+msgstr ""
+
+#77
+#: includes/class-wc-gateway-silicon-pay.php:486
+msgid "Enter the subaccount code here."
+msgstr ""
+
+#78
+msgid "woocommerce_siliconpay_app_subaccount_code"
+msgstr ""
+
+#82
+#: includes/class-wc-gateway-silicon-pay.php:491
+msgid "Split Payment Transaction Charge"
+msgstr ""
+
+#84
+#: includes/class-wc-gateway-silicon-pay.php:493
+msgid ""
+"A flat fee to charge the subaccount for this transaction, in Naira "
+"(USh;). This overrides the split percentage set when the subaccount was "
+"created. Ideally, you will need to use this if you are splitting in flat "
+"rates (since subaccount creation only allows for percentage split). e.g. 100 "
+"for a USh;100 flat fee."
+msgstr ""
+
+#94
+#: includes/class-wc-gateway-silicon-pay.php:503
+msgid "SiliconPay Charges Bearer"
+msgstr ""
+
+#96
+#: includes/class-wc-gateway-silicon-pay.php:505
+msgid "Who bears SiliconPay charges?"
+msgstr ""
+
+#102
+#: includes/class-wc-gateway-silicon-pay.php:511
+msgid "Account"
+msgstr ""
+
+#103
+#: includes/class-wc-gateway-silicon-pay.php:512
+msgid "Subaccount"
+msgstr ""
+
+#107
+msgid "Payment Channels"
+msgstr ""
+
+#110
+msgid "The payment channels enabled for this gateway"
+msgstr ""
+
+#116
+msgid "Select payment channels"
+msgstr ""
+
+#120
+msgid "Allowed Card Brands"
+msgstr ""
+
+#123
+msgid ""
+"The card brands allowed for this gateway. This filter only works with the "
+"card payment channel."
+msgstr ""
+
+#129
+msgid "Select card brands"
+msgstr ""
+
+#133
+msgid "Allowed Banks Card"
+msgstr ""
+
+#136
+msgid ""
+"The banks whose card should be allowed for this gateway. This filter only "
+"works with the card payment channel."
+msgstr ""
+
+#142
+msgid "Select banks"
+msgstr ""
+
+#146
+msgid "Payment Icons"
+msgstr ""
+
+#149
+msgid "The payment icons to be displayed on the checkout page."
+msgstr ""
+
+#155
+msgid "Select payment icons"
+msgstr ""
+
+#159
+#: includes/class-wc-gateway-silicon-pay.php:539
+msgid "Custom Metadata"
+msgstr ""
+
+#160
+#: includes/class-wc-gateway-silicon-pay.php:540
+msgid "Enable Custom Metadata"
+msgstr ""
+
+#163
+#: includes/class-wc-gateway-silicon-pay.php:543
+msgid ""
+"If enabled, you will be able to send more information about the order to "
+"SiliconPay."
+msgstr ""
+
+#168
+#: includes/class-wc-gateway-silicon-pay.php:548
+msgid "Order ID"
+msgstr ""
+
+#169
+#: includes/class-wc-gateway-silicon-pay.php:549
+msgid "Send Order ID"
+msgstr ""
+
+#172
+#: includes/class-wc-gateway-silicon-pay.php:552
+msgid "If checked, the Order ID will be sent to SiliconPay"
+msgstr ""
+
+#177
+#: includes/class-wc-gateway-silicon-pay.php:557
+msgid "Customer Name"
+msgstr ""
+
+#178
+#: includes/class-wc-gateway-silicon-pay.php:558
+msgid "Send Customer Name"
+msgstr ""
+
+#181
+#: includes/class-wc-gateway-silicon-pay.php:561
+msgid "If checked, the customer full name will be sent to SiliconPay"
+msgstr ""
+
+#186
+#: includes/class-wc-gateway-silicon-pay.php:566
+msgid "Customer Email"
+msgstr ""
+
+#187
+#: includes/class-wc-gateway-silicon-pay.php:567
+msgid "Send Customer Email"
+msgstr ""
+
+#190
+#: includes/class-wc-gateway-silicon-pay.php:570
+msgid "If checked, the customer email address will be sent to SiliconPay"
+msgstr ""
+
+#195
+#: includes/class-wc-gateway-silicon-pay.php:575
+msgid "Customer Phone"
+msgstr ""
+
+#196
+#: includes/class-wc-gateway-silicon-pay.php:576
+msgid "Send Customer Phone"
+msgstr ""
+
+#199
+#: includes/class-wc-gateway-silicon-pay.php:579
+msgid "If checked, the customer phone will be sent to SiliconPay"
+msgstr ""
+
+#204
+#: includes/class-wc-gateway-silicon-pay.php:584
+msgid "Order Billing Address"
+msgstr ""
+
+#205
+#: includes/class-wc-gateway-silicon-pay.php:585
+msgid "Send Order Billing Address"
+msgstr ""
+
+#208
+#: includes/class-wc-gateway-silicon-pay.php:588
+msgid "If checked, the order billing address will be sent to SiliconPay"
+msgstr ""
+
+#213
+#: includes/class-wc-gateway-silicon-pay.php:593
+msgid "Order Shipping Address"
+msgstr ""
+
+#214
+#: includes/class-wc-gateway-silicon-pay.php:594
+msgid "Send Order Shipping Address"
+msgstr ""
+
+#217
+#: includes/class-wc-gateway-silicon-pay.php:597
+msgid "If checked, the order shipping address will be sent to SiliconPay"
+msgstr ""
+
+#222
+#: includes/class-wc-gateway-silicon-pay.php:602
+msgid "Product(s) Purchased"
+msgstr ""
+
+#223
+#: includes/class-wc-gateway-silicon-pay.php:603
+msgid "Send Product(s) Purchased"
+msgstr ""
+
+#226
+#: includes/class-wc-gateway-silicon-pay.php:606
+msgid "If checked, the product(s) purchased will be sent to SiliconPay"
+msgstr ""
+
+#. translators: payment method title
+#246
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-five.php:53
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-four.php:53
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-one.php:53
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-three.php:53
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-two.php:53
+#, php-format
+msgid "SiliconPay - %s"
+msgstr ""
+
+#250
+#: includes/class-wc-gateway-silicon-pay.php:360
+msgid "Return to payments"
+msgstr ""
+
+#. translators: link to SiliconPay developers settings page
+#258
+#, php-format
+msgid ""
+"Important: To avoid situations where bad network makes it impossible to "
+"verify transactions, set your webhook URL <a href=\"%s\" target=\"_blank\" "
+"rel=\"noopener noreferrer\">here</a> to the URL below"
+msgstr ""
+
+#. translators: link to SiliconPay general settings page
+#269
+#, php-format
+msgid ""
+"To configure your SiliconPay API keys and enable/disable test mode, do that <a "
+"href=\"%s\">here</a>"
+msgstr ""
+
+#. translators: disabled message
+#284
+#, php-format
+msgid "SiliconPay Payment Gateway Disabled: %s"
+msgstr ""
+
+
+#298
+msgid "USSD"
+msgstr ""
+#313
+#364
+msgid "Mastercard"
+msgstr ""
+
+
+#365
+msgid "Secured by SiliconPay White"
+msgstr ""
+
+#366
+msgid "Secured by SiliconPay Blue"
+msgstr ""
+
+#367
+msgid "SiliconPay Nigeria"
+msgstr ""
+
+#368
+msgid "SiliconPay Ghana"
+msgstr ""
+
+#55
+msgid "This subscription has a free trial, reason for the 0 amount"
+msgstr ""
+
+#82
+#, php-format
+msgid "SiliconPay Transaction Failed (%s)"
+msgstr ""
+
+#142
+#: includes/class-wc-gateway-silicon-pay.php:1237
+#: includes/class-wc-gateway-silicon-pay.php:1376
+#, php-format
+msgid "Payment via SiliconPay successful (Transaction Reference: %s)"
+msgstr ""
+
+#154
+msgid "SiliconPay payment failed."
+msgstr ""
+
+#157
+#, php-format
+msgid "SiliconPay payment failed. Reason: %s"
+msgstr ""
+
+#166
+msgid ""
+"This subscription can&#39;t be renewed automatically. The customer will have "
+"to login to their account to renew their subscription"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:183
+#, php-format
+msgid ""
+"SiliconPay provide merchants with the tools and services needed to accept "
+"online payments from local and international customers using Mastercard, "
+"Visa. <a href=\"%1$s\" target=\"_blank\">Sign "
+"up</a> for a SiliconPay account, and <a href=\"%2$s\" target=\"_blank\">get "
+"your API keys</a>."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:279
+#, php-format
+msgid ""
+"SiliconPay does not support your store currency. Kindly set it to either UGX "
+"(USh), GHS (&#x20b5;), USD (&#36;), KES (KSh) or ZAR (R) <a href=\"%s"
+"\">here</a>"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:321
+#, php-format
+msgid ""
+"Please enter your SiliconPay merchant details <a href=\"%s\">here</a> to be "
+"able to use the SiliconPay WooCommerce plugin."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:366
+#, php-format
+msgid ""
+"Optional: To avoid situations where bad network makes it impossible to "
+"verify transactions, set your webhook URL <a href=\"%1$s\" target=\"_blank\" "
+"rel=\"noopener noreferrer\">here</a> to the URL below<span style=\"color: red"
+"\"><pre><code>%2$s</code></pre></span>"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:379
+msgid "SiliconPay Payment Gateway Disabled"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:394
+msgid "Enable SiliconPay"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:396
+msgid "Enable SiliconPay as a payment option on the checkout page."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:404
+msgid "Debit/Credit Cards"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:411
+msgid "Make payment using your debit and credit cards"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:415
+msgid "Test mode"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:416
+msgid "Enable Test Mode"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:418
+msgid ""
+"Test mode enables you to test payments before going live. <br />Once the "
+"LIVE MODE is enabled on your SiliconPay account uncheck this."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:435
+msgid "Test Secret Key"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:437
+msgid "Enter your Test Secret Key here"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:441
+msgid "Test Public Key"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:443
+msgid "Enter your Test Public Key here."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:447
+msgid "Live Secret Key"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:449
+msgid "Enter your Live Secret Key here."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:453
+msgid "Live Public Key"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:455
+msgid "Enter your Live Public Key here."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:494
+msgid "woocommerce_siliconpay_app_split_payment_transaction_charge"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:516
+msgid "Additional SiliconPay Gateways"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:518
+msgid ""
+"Create additional custom SiliconPay based gateways. This allows you to create "
+"additional SiliconPay gateways using custom filters. You can create a gateway "
+"that accepts only verve cards, a gateway that accepts only bank payment, a "
+"gateway that accepts a specific bank issued cards."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:523
+msgid "1 gateway"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:524
+msgid "2 gateways"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:525
+msgid "3 gateways"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:526
+msgid "4 gateways"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:527
+msgid "5 gateways"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:531
+msgid "Saved Cards"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:532
+msgid "Enable Payment via Saved Cards"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:534
+msgid ""
+"If enabled, users will be able to pay with a saved card during checkout. "
+"Card details are saved on SiliconPay servers, not on your store.<br>Note that "
+"you need to have a valid SSL certificate installed."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:944
+msgid "Unable to process payment try again"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1024
+#: includes/class-wc-gateway-silicon-pay.php:1198
+#: includes/class-wc-gateway-silicon-pay.php:1334
+#, php-format
+msgid ""
+"Thank you for shopping with us.%1$sYour payment transaction was successful, "
+"but the amount paid is not the same as the total order amount.%2$sYour order "
+"is currently on hold.%3$sKindly contact us for more information regarding "
+"your order and payment status."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1031
+#: includes/class-wc-gateway-silicon-pay.php:1205
+#: includes/class-wc-gateway-silicon-pay.php:1341
+#, php-format
+msgid ""
+"<strong>Look into this order</strong>%1$sThis order is currently on hold."
+"%2$sReason: Amount paid is less than the total order amount.%3$sAmount Paid "
+"was <strong>%4$s (%5$s)</strong> while the total order amount is <strong>"
+"%6$s (%7$s)</strong>%8$s<strong>SiliconPay Transaction Reference:</strong> %9$s"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1044
+#: includes/class-wc-gateway-silicon-pay.php:1220
+#: includes/class-wc-gateway-silicon-pay.php:1358
+#, php-format
+msgid ""
+"Thank you for shopping with us.%1$sYour payment was successful, but the "
+"payment currency is different from the order currency.%2$sYour order is "
+"currently on-hold.%3$sKindly contact us for more information regarding your "
+"order and payment status."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1051
+#: includes/class-wc-gateway-silicon-pay.php:1227
+#: includes/class-wc-gateway-silicon-pay.php:1365
+#, php-format
+msgid ""
+"<strong>Look into this order</strong>%1$sThis order is currently on hold."
+"%2$sReason: Order currency is different from the payment currency.%3$sOrder "
+"Currency is <strong>%4$s (%5$s)</strong> while the payment currency is "
+"<strong>%6$s (%7$s)</strong>%8$s<strong>SiliconPay Transaction Reference:</"
+"strong> %9$s"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1075
+#: includes/class-wc-gateway-silicon-pay.php:1257
+msgid "Payment was declined by SiliconPay."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1076
+msgid "Payment failed using the saved card. Kindly use another payment option."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1080
+#, php-format
+msgid "Payment was declined by SiliconPay. Reason: %s."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1081
+#, php-format
+msgid ""
+"Payment failed using the saved card. Reason: %s. Kindly use another payment "
+"option."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1095
+msgid "Payment Failed."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1106
+msgid "You can only add a new card when placing an order."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1123
+msgid ""
+"Thank you for your order, please click the button below to pay with SiliconPay."
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1125
+msgid "Pay Now"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1128
+msgid "Cancel order &amp; restore cart"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1658
+#, php-format
+msgid "Refund for Order ID: #%1$s on %2$s"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1680
+#, php-format
+msgid "Refunded %1$s. Refund ID: %2$s. Reason: %3$s"
+msgstr ""
+
+#: includes/class-wc-gateway-silicon-pay.php:1693
+msgid "Can&#39;t process refund at the moment. Try again later."
+msgstr ""
+
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-five.php:50
+msgid "Five"
+msgstr ""
+
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-four.php:50
+msgid "Four"
+msgstr ""
+
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-one.php:50
+msgid "One"
+msgstr ""
+
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-three.php:50
+msgid "Three"
+msgstr ""
+
+#: includes/custom-gateways/class-wc-gateway-silicon-pay-two.php:50
+msgid "Two"
+msgstr ""
+
+#: woo-silicon-pay.php:69
+msgid "View SiliconPay WooCommerce Settings"
+msgstr ""
+
+#: woo-silicon-pay.php:69
+msgid "Settings"
+msgstr ""
+
+#: woo-silicon-pay.php:140
+#, php-format
+msgid ""
+"SiliconPay requires WooCommerce to be installed and active. Click %s to "
+"install WooCommerce."
+msgstr ""
+
+#. translators: 1. SiliconPay settings page URL link.
+#: woo-silicon-pay.php:157
+#, php-format
+msgid ""
+"SiliconPay test mode is still enabled, Click <strong><a href=\"%s\">here</a></"
+"strong> to disable it when you want to start accepting live payment on your "
+"site."
+msgstr ""
+
+#. Plugin Name of the plugin/theme
+msgid "SiliconPay WooCommerce Payment Gateway"
+msgstr ""
+
+#. Plugin URI of the plugin/theme
+msgid "https://silicon-pay.com"
+msgstr ""
+
+#. Description of the plugin/theme
+msgid "WooCommerce payment gateway for SiliconPay"
+msgstr ""
+
+#. Author of the plugin/theme
+msgid "S.A.V.I.O.U.R"
+msgstr ""
+
+#. Author URI of the plugin/theme
+msgid "https://github.com/simillustra"
+msgstr ""
