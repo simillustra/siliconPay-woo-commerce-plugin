@@ -70,6 +70,13 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
     public $subaccount_code;
 
     /**
+     * SiliconPay $payment_channel.
+     *
+     * @var string
+     */
+    public $payment_channel;
+
+    /**
      * Who bears SiliconPay charges?
      *
      * @var string
@@ -77,7 +84,7 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
     public $charges_account;
 
     /**
-     * A flat fee to charge the sub account for each transaction.
+     * A flat fee to charge the sub_account for each transaction.
      *
      * @var string
      */
@@ -167,10 +174,11 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
     {
         $this->id = 'siliconpay';
         $this->method_title = __('SiliconPay', 'woo-siliconpay');
-        $this->method_description = sprintf(__('SiliconPay provide merchants with the tools and services needed to accept online payments from local and international customers using Mastercard, Visa, Verve Cards and Bank Accounts. <a href="%1$s" target="_blank">Sign up</a> for a SiliconPay account, and <a href="%2$s" target="_blank">get your API keys</a>.', 'woo-siliconpay'), 'https://siliconpay.com', 'https://dashboard.siliconpay.com/#/settings/developer');
+        $this->method_description = sprintf(__('SiliconPay provide merchants with the tools and services needed to accept online payments from local and international customers using Mastercard, Visa, and Mobile Money. <a href="%1$s" target="_blank">Sign up</a> for a SiliconPay account, and <a href="%2$s" target="_blank">get your API keys</a>.', 'woo-siliconpay'), 'https://silicon-pay.com', 'https://dashboard.silicon-pay.com');
         $this->has_fields = true;
 
         $this->payment_page = $this->get_option('payment_page');
+
 
         $this->supports = array(
             'products',
@@ -189,7 +197,7 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
         $this->enabled = $this->get_option('enabled');
         $this->testmode = $this->get_option('testmode') === 'yes' ? true : false;
         $this->autocomplete_order = $this->get_option('autocomplete_order') === 'yes' ? true : false;
-
+        $this->payment_channel = $this->get_option('payment_channel');
         $this->live_encryption_key = $this->get_option('live_encryption_key');
         $this->live_secret_key = $this->get_option('live_secret_key');
 
@@ -389,7 +397,7 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
                 'title' => __('Description', 'woo-siliconpay'),
                 'type' => 'textarea',
                 'description' => __('This controls the payment method description which the user sees during checkout.', 'woo-siliconpay'),
-                'default' => __('Make payment using your debit and credit cards', 'woo-siliconpay'),
+                'default' => __('Powered by SiliconPay: Accepts Mastercard, Visa, MPESA and Mobile Money', 'woo-siliconpay'),
                 'desc_tip' => true,
             ),
             'testmode' => array(
@@ -423,6 +431,19 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
                 'type' => 'text',
                 'description' => __('Enter your Merchant Encryption Key here.', 'woo-siliconpay'),
                 'default' => '',
+            ),
+            'payment_channel' => array(
+                'title' => __('Payment Channel', 'woo-siliconpay'),
+                'type' => 'select',
+                'description' => __('Select A payment channel', 'woo-siliconpay'),
+                'default' => 'Mobile_Money',
+                'desc_tip' => false,
+                'options' => array(
+                    '' => __('Select One', 'woo-siliconpay'),
+                    'Mobile_Money' => __('Mobile Money', 'woo-siliconpay'),
+                    'Credit_Debit_Card' => __('Credit/Debit Card', 'woo-siliconpay'),
+                    'MPESA' => __('MPESA', 'woo-siliconpay'),
+                ),
             ),
             'autocomplete_order' => array(
                 'title' => __('Autocomplete Order After Payment', 'woo-siliconpay'),
@@ -543,14 +564,17 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
                   style="background:transparent;">
             <!-- // Add this action hook if you want your custom payment gateway to support it -->
             <?php do_action('woocommerce_silicon_pay_channel_form_start', $this->id); ?>
-            <!-- // I recommend to use inique IDs, because other gateways could already use #ccNo, #expdate, #cvc -->
+            <!-- // I recommend to use unique IDs, because other gateways could already use #ccNo, #expdate, #cvc -->
             <div class="form-row form-row-wide">
-                <label class="label">Payment Channel <span class="required">*</span></label>
-                <select class="form-control" id="pf-wc-method" name="pf-wc-method">
-                    <option value="Mobile Money" selected>Mobile Money</option>
-                    <option value="Credit/Debit Card">Credit/Debit Card</option>
-                    <option value="MPESA">MPESA</option>
-                </select>
+                <label class="label"><b>Payment Channel Enabled</b></label>
+                <?php if ($this->payment_channel == "Mobile_Money"): ?>
+                    <pre>Mobile Money</pre>
+                <?php elseif ($this->payment_channel == "Credit_Debit_Card") : ?>
+                    <pre>Credit/Debit Card</pre>
+                <?php else:($this->payment_channel == "MPESA") ?>
+                    <pre>MPESA</pre>
+                <?php endif; ?>
+                Poweredb by: SILICONPAY
             </div>
             <div class="clear"></div>
             <?php do_action('woocommerce_silicon_pay_channel_form_start', $this->id); ?>
@@ -638,6 +662,10 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
 
                     $siliconpay_app_params['meta_email'] = $email;
 
+                }
+
+                if ($this->payment_channel) {
+                    $siliconpay_app_params['payment_channel'] = $this->payment_channel;
                 }
 
                 if ($this->meta_phone) {
@@ -962,7 +990,7 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
                                 'woo-siliconpay'), $siliconpay_app_ref));
 
                             if ($this->is_autocomplete_order_enabled($order)) {
-                                $order->update_status('completed');
+                                $order->update_status('initiated');
                             }
                         }
                     }
@@ -1183,10 +1211,10 @@ class WC_Gateway_SiliconPay extends WC_Payment_Gateway_CC
             return array();
         }
 
-        $payment_channels = $this->payment_channels;
+        $payment_channels = $this->payment_channel;
 
         if (empty($payment_channels)) {
-            $payment_channels = array('card');
+            $payment_channels = 'Mobile_Money';
         }
 
         return $payment_channels;
